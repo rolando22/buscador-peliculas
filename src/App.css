@@ -1,1 +1,16 @@
+.App-header {
+    display: grid;
+    place-items: center;
+}
 
+.App-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}

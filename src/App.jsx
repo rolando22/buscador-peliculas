@@ -1,12 +1,12 @@
 import { Movies } from './components/Movies';
 
-import movies from './mocks/okResponse.json';
+import { useMovies } from './hooks/useMovies.js';
 
 import './App.css';
 
 
 export function App() {
-
+    const { movies } = useMovies();
 
     return (
         <>

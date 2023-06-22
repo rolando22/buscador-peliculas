@@ -1,8 +1,13 @@
+import { Movies } from './components/Movies';
+
 import movies from './mocks/okResponse.json';
 
 import './App.css';
 
+
 export function App() {
+
+
     return (
         <>
             <header className='App-header'>
@@ -13,15 +18,7 @@ export function App() {
                 </form>
             </header>
             <main>
-                <ul className='App-list'>
-                    {movies.Search.map(movie => 
-                        <li key={movie.imdbID}>
-                            <h3>{movie.Title}</h3>
-                            <p>{movie.Year}</p>
-                            <img src={movie.Poster} alt={movie.Title} />
-                        </li>
-                    )}
-                </ul>
+                <Movies movies={movies} />
             </main>
         </>
     );

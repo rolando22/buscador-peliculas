@@ -1,12 +1,22 @@
+#root {
+    width: 100%;
+}
+
 .App-header {
+    margin-bottom: 70px;
     display: grid;
     place-items: center;
+    text-align: center;
 }
 
 .App-form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.App-main {
+    width: 100%;
 }
 
 .App-error-search {

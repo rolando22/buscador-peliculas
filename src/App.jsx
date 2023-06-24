@@ -27,7 +27,7 @@ export function App() {
                 </form>
                 {errorSearch && <p className='App-error-search'>{errorSearch}</p>}
             </header>
-            <main>
+            <main className='App-main'>
                 <Movies movies={movies} />
             </main>
         </>

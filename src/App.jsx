@@ -12,7 +12,11 @@ export function App() {
     const { search, setSearch, errorSearch } = useSearch();
     const { movies, getMovies, loading, error } = useMovies({ search, sort });
 
-    const handleOnChange = (event) => setSearch(event.target.value);
+    const handleOnChange = (event) => {
+        const newSearch = event.target.value;
+        setSearch(newSearch);
+        getMovies({ search: newSearch });
+    };
 
     const handleOnSubmit = (event) => {
         event.preventDefault();

@@ -1,13 +1,23 @@
-import responseMovies from './../mocks/okResponse.json';
+import { useState } from "react";
+import { searchMovies } from "../services/movies.service";
 
-export function useMovies() {
+export function useMovies({ search }) {
+    const [movies, setMovies] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-    const moviesMapped = responseMovies.Search.map(movie => ({
-        id: movie.imdbID,
-        title: movie.Title,
-        year: movie.Year,
-        poster: movie.Poster,
-    }));
+    const getMovies = async () => {
+        try {
+            setLoading(true);
+            setError(null);
+            const searchedMovies = await searchMovies({ search });
+            setMovies(searchedMovies);
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
 
-    return { movies: moviesMapped };
+    return { movies, getMovies, loading, error };
 }

@@ -1,4 +1,4 @@
-# Repositorio proyecto prueba técnica para Juniors y Trainees con React
+# Repositorio proyecto prueba técnica para Juniors con React
 
 El proyecto fue creado mientras realizaba el curso de React 2023 de Midudev [Aprende a pasar una Prueba Técnica de React. Entiende useMemo, useCallback y useRef](https://www.youtube.com/@midulive).
 

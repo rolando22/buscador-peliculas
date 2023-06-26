@@ -42,12 +42,15 @@ export function App() {
                         onChange={handleOnChange}
                         placeholder='Avengers, Spider-Man, Matrix...' 
                     />
-                    <input 
-                        type='checkbox' 
-                        onChange={handleOnChangeSort} 
-                        checked={sort} 
-                    />
                     <button>Buscar</button>
+                    <label htmlFor=''>
+                        <input 
+                            type='checkbox' 
+                            onChange={handleOnChangeSort} 
+                            checked={sort} 
+                        />
+                        Ordenar por título
+                    </label>
                 </form>
                 {errorSearch && <p className='App-error-search'>{errorSearch}</p>}
             </header>

@@ -1,9 +1,9 @@
-const API = 'https://www.omdbapi.com/';
-const API_KEY = 'a73fbff2';
+import { config } from './../config';
 
 export async function searchMovies({ search }) {
+    console.log(config);
     try {
-        const response = await fetch(`${API}?apikey=${API_KEY}&s=${search}`);
+        const response = await fetch(`${config.api}?apikey=${config.apiKey}&s=${search}`);
         const json = await response.json();
         const movies = json?.Search?.map(movie => ({
             id: movie.imdbID,

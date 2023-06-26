@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-import { Movies } from './components/Movies';
+import { Error, Loader, Movies } from './components';
 
 import { useMovies } from './hooks/useMovies.js';
 import { useSearch } from './hooks/useSearch';
@@ -55,8 +55,8 @@ export function App() {
                 {errorSearch && <p className='App-error-search'>{errorSearch}</p>}
             </header>
             <main className='App-main'>
-                { loading && <p>Cargando...</p> }
-                { !loading && error && <p>{error}</p> }
+                { loading && <Loader /> }
+                { !loading && error && <Error error={error} /> }
                 { !loading && !error && <Movies movies={movies} /> }
             </main>
         </>

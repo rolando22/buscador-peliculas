@@ -17,6 +17,7 @@
 
 .App-main {
     width: 100%;
+    display: grid;
 }
 
 .App-error-search {

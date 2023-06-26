@@ -1,7 +1,6 @@
 import { config } from './../config';
 
 export async function searchMovies({ search }) {
-    console.log(config);
     try {
         const response = await fetch(`${config.api}?apikey=${config.apiKey}&s=${search}`);
         const json = await response.json();

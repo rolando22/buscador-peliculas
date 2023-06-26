@@ -13,7 +13,7 @@ Este repositorio contiene el código de una aplicación para obtener informació
 - useMemo para evitar que el cálculo para ordenar las películas se vuelva a ejecutar en cada renderizado.
 - Función debounce para poner un delay a la petición en la búsqueda automática y no hacer peticiones en cada carácter tipeado.
 
-Puedes ver el demo aquí: ().
+Puedes ver el demo aquí: (https://rolando22.github.io/buscador-peliculas/).
 
 # Prueba técnica para Juniors de React.
 
